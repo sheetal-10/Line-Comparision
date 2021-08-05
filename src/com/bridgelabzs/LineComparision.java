@@ -3,7 +3,8 @@ package com.bridgelabzs;
 import java.util.Scanner;
 
 /**
- * this program calculate length of lines
+ * this program calculate and 
+ * compare length of 2 lines
  * @author Sheetal
  * @since 2021-08-05
  */
@@ -12,7 +13,7 @@ public class LineComparision {
 	/**
 	 * this is the main method that
 	 * use math formula to calculate length of 2lines
-	 * and checks equality
+	 * and compare them
 	 */
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Comparision Computation program");
@@ -39,12 +40,14 @@ public class LineComparision {
 		//computation
 		Double length_of_line1 = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
 		Double length_of_line2 = Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
-		System.out.printf("Length of 1st end point is : %.2f %n", length_of_line1);
-		System.out.printf("length of 2nd end points are : %.2f %n", length_of_line2);
-		boolean ans = length_of_line1.equals(length_of_line2);
-		if(ans)
-			System.out.println("Both lines are equal.");
+		System.out.printf("Length of 1st line is : %.2f %n", length_of_line1);
+		System.out.printf("length of 2nd line is : %.2f %n", length_of_line2);
+		int result = length_of_line1.compareTo(length_of_line2);
+		if(result > 0)
+			System.out.println("Length of first line is greater than length of second line");
+		else if(result < 0)
+			System.out.println("Length of first line is less than length of second line");
 		else
-			System.out.println("Both lines are not equal.");
+			System.out.println("Both lines are equal.");
 	}
 }
