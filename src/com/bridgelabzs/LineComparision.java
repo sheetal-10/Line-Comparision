@@ -42,10 +42,10 @@ public class LineComparision {
 		Double length_of_line2 = Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
 		System.out.printf("Length of 1st line is : %.2f %n", length_of_line1);
 		System.out.printf("length of 2nd line is : %.2f %n", length_of_line2);
-		int result = length_of_line1.compareTo(length_of_line2);
-		if(result > 0)
+		int comp = length_of_line1.compareTo(length_of_line2);
+		if(comp > 0)
 			System.out.println("Length of first line is greater than length of second line");
-		else if(result < 0)
+		else if(comp < 0)
 			System.out.println("Length of first line is less than length of second line");
 		else
 			System.out.println("Both lines are equal.");
